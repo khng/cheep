@@ -1,0 +1,25 @@
+<div class="form-container">
+  <form [formGroup]="itemFormGroup" (ngSubmit)="onSubmit(itemFormGroup.value)">
+    <div class="input-fields">
+      <div class="input-field">
+        <input type="text" placeholder="Item Name" formControlName="itemName"/>
+        <small *ngIf="validateName()">
+          <span>Required!</span>
+        </small>
+      </div>
+      <div class="input-field">
+        <input type="number" placeholder="Item Price" formControlName="itemPrice"/>
+        <small *ngIf="validatePrice()">
+          <span>Required!</span>
+        </small>
+      </div>
+      <div class="input-field">
+        <input type="text" placeholder="Item Image Url" formControlName="itemImage"/>
+        <small *ngIf="validateImage()">
+          <span>Required!</span>
+        </small>
+      </div>
+    </div>
+    <input type="submit" value="Submit" [disabled]="!itemFormGroup.valid">
+  </form>
+</div>

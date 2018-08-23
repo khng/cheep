@@ -1,0 +1,22 @@
+.tile {
+  margin: 2rem 1rem 0;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid grey;
+  border-radius: 8px;
+}
+
+.tile-content {
+  text-align: center;
+  color: grey;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  filter: grayscale(100%);
+}
